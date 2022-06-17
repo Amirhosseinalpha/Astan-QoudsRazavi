@@ -1,0 +1,375 @@
+body {
+  background: url("../images/bg.png");
+}
+
+nav {
+  background: url("../images/katibe.png");
+}
+
+nav ul {
+  padding: 0;
+  background: url("../images/katibe.png");
+  background-repeat: repeat-x;
+  margin: 0 60px;
+  position: relative;
+}
+
+nav ul::after {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 60px;
+  height: 64px;
+  left: -60px;
+  z-index: 0;
+  background: url("../images/katibe-left.png");
+}
+
+nav ul::before {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 60px;
+  height: 64px;
+  right: -60px;
+  z-index: 0;
+  background: url("../images/katibe-left.png");
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
+
+nav ul#main-sub-menu li:first-of-type, nav ul#main-sub-menu li:nth-of-type(2), nav ul#main-sub-menu li:nth-of-type(3) {
+  display: none;
+}
+
+@media (max-width: 1450px) {
+  nav ul#main-sub-menu li:first-of-type {
+    display: list-item;
+  }
+  nav ul#main-sub-menu li:nth-of-type(4), nav ul#main-sub-menu li:nth-of-type(5) {
+    display: none;
+  }
+}
+
+@media (max-width: 1370px) {
+  nav ul#main-sub-menu li:nth-of-type(6) {
+    display: none;
+  }
+}
+
+@media (max-width: 1290px) {
+  nav ul#main-sub-menu li:nth-of-type(7) {
+    display: none;
+  }
+}
+
+@media (max-width: 1190px) {
+  nav ul#main-sub-menu li:nth-of-type(3) {
+    display: list-item;
+  }
+}
+
+@media (max-width: 1090px) {
+  nav ul#main-sub-menu li:nth-of-type(2) {
+    display: list-item;
+  }
+}
+
+@media (max-width: 1190px) {
+  nav ul#sebt {
+    display: none;
+  }
+}
+
+@media (max-width: 1090px) {
+  nav ul#lib {
+    display: none;
+  }
+}
+
+nav ul li {
+  z-index: 1;
+  margin: auto 15px;
+  background: transparent !important;
+}
+
+nav ul li a {
+  opacity: 0.6;
+  background: transparent !important;
+}
+
+nav ul li a:hover {
+  opacity: 1;
+}
+
+nav ul li.active a {
+  opacity: 1;
+}
+
+nav ul li:first-of-type, nav ul li:nth-of-type(4) {
+  margin-left: 0 !important;
+}
+
+nav ul li:last-of-type {
+  margin-right: 0 !important;
+}
+
+nav .logo {
+  text-align: center;
+}
+
+nav .logo img {
+  height: 45px;
+  margin: 10px -15px;
+}
+
+@media (max-width: 992px) {
+  nav {
+    position: relative;
+  }
+  nav::before {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 60px;
+    height: 64px;
+    z-index: 0;
+    left: 0;
+    top: 0;
+    background: url("../images/katibe-left.png");
+  }
+  nav::after {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 60px;
+    height: 64px;
+    z-index: 0;
+    top: 0;
+    right: 0;
+    background: url("../images/katibe-left.png");
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+  }
+}
+
+@media (max-width: 599px) {
+  nav {
+    position: relative;
+    background-size: contain;
+  }
+  nav .logo {
+    text-align: center;
+  }
+  nav .logo img {
+    height: 40px;
+    margin: 8px -15px;
+  }
+  nav::before {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 52px;
+    height: 56px;
+    z-index: 0;
+    left: 0;
+    top: 0;
+    background: url("../images/katibe-left.png");
+    background-size: contain;
+  }
+  nav::after {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 52px;
+    height: 56px;
+    z-index: 0;
+    top: 0;
+    right: 0;
+    background: url("../images/katibe-left.png");
+    background-size: contain;
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+  }
+}
+
+nav #menu-trigger {
+  position: absolute;
+  right: 70px;
+}
+
+#banner {
+  background: url("../images/banner.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 46vh;
+  text-align: center;
+}
+
+@media (max-width: 991px) {
+  #banner {
+    height: 55vh;
+  }
+}
+
+#banner img {
+  max-height: 22vh;
+  max-width: 90%;
+}
+
+@media (max-width: 991px) {
+  #banner img {
+    margin-top: 25px;
+  }
+}
+
+#banner h1 {
+  font-size: 27px;
+  margin: 0 0 15px 0;
+}
+
+#banner #search-box {
+  background: #FFF;
+  width: 90%;
+  max-width: 450px;
+  margin: auto;
+  border-radius: 100px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border: 1px solid #02c893;
+}
+
+#banner #search-box input {
+  width: calc(100% - 80px);
+  margin: 0;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 15px;
+}
+
+#banner span {
+  opacity: 0.85;
+  display: block;
+  margin: 10px auto;
+  width: 90%;
+}
+
+header::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 29px;
+  background: #03036f;
+  background-image: url("../images/kashi.png");
+}
+
+.square-wrapper {
+  position: relative;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.square-wrapper::after {
+  padding-top: 100%;
+  display: block;
+  content: '';
+}
+
+.square-wrapper .square {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.square-wrapper .center-text-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.flex-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  resize: vertical;
+  overflow: auto;
+  height: 100%;
+}
+
+.flex-center h4 {
+  margin: 0;
+  padding: 10px 20px;
+}
+
+.flex-center h4, .flex-center h5 {
+  text-shadow: 1px 1px 4px black;
+}
+
+a .image-container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  filter: drop-shadow(1px 1px 4px #00a6e9);
+  -moz-transition: 0.3s all linear;
+  -o-transition: 0.3s all linear;
+  transition: 0.3s all linear;
+}
+
+a .image-container .image-mask1 {
+  height: 100%;
+  transform: rotate(45deg);
+  overflow: hidden;
+}
+
+a .image-container .image {
+  height: 100%;
+  width: 100%;
+  transform: rotate(-45deg);
+}
+
+a .image-container .image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+a:hover .image-container {
+  filter: drop-shadow(2px 2px 16px #00a6e9);
+}
+
+.clearfix::after {
+  display: block;
+  content: '';
+  clear: both;
+}
+
+.astan-blue {
+  background: #010147 !important;
+}
+
+.section {
+  margin-top: 0;
+}
+
+.section h4 {
+  margin: 5px;
+}
+
+.section h4 + .row {
+  margin-top: 0;
+}
+/*# sourceMappingURL=site.css.map */

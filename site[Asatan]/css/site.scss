@@ -1,0 +1,346 @@
+$astabBLue: #03036f;
+$cyan: #02c893;
+$Bluecyan: #00a6e9;
+body{
+    background: url('../images/bg.png');
+}
+nav {
+    background: url('../images/katibe.png');
+    
+    ul {
+        padding: 0;
+        background: url('../images/katibe.png');
+        background-repeat: repeat-x;
+        margin: 0 60px; 
+        position: relative;
+        &::after{
+            position: absolute;
+            content: '';
+            display: block;
+            width: 60px;
+            height: 64px;
+            left:-60px;
+            z-index: 0;
+            background: url('../images/katibe-left.png');
+        }
+        &::before{
+            position: absolute;
+            content: '';
+            display: block;
+            width: 60px;
+            height: 64px;
+            right:-60px;
+            z-index: 0;
+            background: url('../images/katibe-left.png');
+            -moz-transform: scaleX(-1);
+            -o-transform: scaleX(-1);
+            -webkit-transform: scaleX(-1);
+            transform: scaleX(-1);
+            filter: FlipH;
+            -ms-filter: "FlipH";
+        }
+        &#main-sub-menu{
+            li{
+                &:first-of-type,&:nth-of-type(2),&:nth-of-type(3){
+                    display: none;
+                }
+                @media (max-width: 1450px) {
+                    &:first-of-type{
+                        display: list-item;
+                    }
+                    &:nth-of-type(4),&:nth-of-type(5){
+                        display: none;
+                    }
+                }
+                @media (max-width: 1370px) {
+                    &:nth-of-type(6){
+                        display: none;
+                    }
+                } 
+                @media (max-width: 1290px) {
+                    &:nth-of-type(7){
+                        display: none;
+                    }
+                }
+                @media (max-width: 1190px) {
+                    &:nth-of-type(3){
+                        display: list-item;
+                    }
+                }
+                @media (max-width: 1090px) {
+                    &:nth-of-type(2){
+                        display: list-item;
+                    }
+                }
+            } 
+        }
+        &#sebt{
+            @media (max-width: 1190px) {
+                display: none;
+            }
+        }
+        &#lib{
+            @media (max-width: 1090px) {
+                display: none;
+            }
+        }
+        li {
+            z-index: 1;
+            margin: auto 15px;
+            background: transparent !important;
+            a{
+                opacity: 0.6;
+                background: transparent !important;
+                &:hover{
+                    opacity: 1;
+                }
+            }
+            &.active{
+                a{
+                    opacity: 1;
+                }
+            }
+            &:first-of-type,&:nth-of-type(4){
+                margin-left: 0 !important;
+            }
+            &:last-of-type{
+                margin-right: 0 !important;
+            }
+        }
+    }
+    .logo{
+        text-align: center;
+        img {
+            height: 45px;
+            margin: 10px -15px;
+        }
+    }
+    @media(max-width: 992px){
+        position: relative;
+        &::before{
+            position: absolute;
+            content: '';
+            display: block;
+            width: 60px;
+            height: 64px;
+            z-index: 0;
+            left: 0;
+            top:0;
+            background: url('../images/katibe-left.png');
+        }
+        &::after{
+            position: absolute;
+            content: '';
+            display: block;
+            width: 60px;
+            height: 64px;
+            z-index: 0;
+            top:0;
+            right: 0;
+            background: url('../images/katibe-left.png');
+            -moz-transform: scaleX(-1);
+            -o-transform: scaleX(-1);
+            -webkit-transform: scaleX(-1);
+            transform: scaleX(-1);
+            filter: FlipH;
+            -ms-filter: "FlipH";
+        }
+    }
+    @media(max-width: 599px){
+        position: relative;
+        background-size: contain;
+        .logo{
+            text-align: center;
+            img {
+                height: 40px;
+                margin: 8px -15px;
+            }
+        }
+        &::before{
+            position: absolute;
+            content: '';
+            display: block;
+            width: 52px;
+            height: 56px;
+            z-index: 0;
+            left: 0;
+            top:0;
+            background: url('../images/katibe-left.png');
+            background-size: contain;
+        }
+        &::after{
+            position: absolute;
+            content: '';
+            display: block;
+            width: 52px;
+            height: 56px;
+            z-index: 0;
+            top:0;
+            right: 0;
+            background: url('../images/katibe-left.png');
+            background-size: contain;
+            -moz-transform: scaleX(-1);
+            -o-transform: scaleX(-1);
+            -webkit-transform: scaleX(-1);
+            transform: scaleX(-1);
+            filter: FlipH;
+            -ms-filter: "FlipH";
+        }
+    }
+
+    #menu-trigger{
+        position: absolute;
+        right: 70px;
+    }
+}
+
+#banner{
+    background: url('../images/banner.jpg');
+    background-size: cover;
+    width: 100%;
+    height: 46vh;
+    text-align: center;
+    @media (max-width: 991px){
+        height: 55vh;
+    }
+    
+    
+    img{
+        @media (max-width: 991px){
+            margin-top: 25px;
+        }
+        max-height: 22vh;
+        max-width: 90%;
+    }
+    h1{
+        font-size: 27px;
+        margin: 0 0 15px 0;
+    }
+    #search-box{
+        background: #FFF;
+        width: 90%;
+        max-width: 450px;
+        margin: auto;
+        border-radius: 100px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        border: 1px solid $cyan;
+        input{
+            width: calc(100% - 80px);
+            margin: 0;
+            border: none !important;
+            box-shadow: none !important;
+            padding: 0 15px;
+        }
+        
+    }
+    span{
+        opacity: 0.85;
+        display: block;
+        margin: 10px auto;
+        width: 90%;
+    }
+}
+
+header{
+    &::after{
+        content: '';
+        display: block;
+        width: 100%;
+        height: 29px;
+        background: $astabBLue;
+        background-image: url('../images/kashi.png');
+    }
+}
+
+.square-wrapper{
+    position: relative;
+    width: 100%;
+    margin-top: 30px;
+    &::after{
+        padding-top: 100%;
+        display: block;
+        content: '';
+    }
+    .square{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+    }
+    .center-text-container{
+        position: absolute;
+        top:0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.flex-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    resize: vertical;
+    overflow: auto;
+    height: 100%;
+    h4 {
+        margin: 0;
+        padding: 10px 20px;
+    }
+
+    h4, h5{
+        text-shadow: 1px 1px 4px black;
+    }
+}
+
+a{
+    .image-container {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        filter: drop-shadow(1px 1px 4px $Bluecyan);
+        -moz-transition: 0.3s all linear;
+        -o-transition: 0.3s all linear;
+        transition: 0.3s all linear;
+        .image-mask1 {
+            height:100%;
+            transform:rotate(45deg);
+            overflow:hidden;
+        }
+        .image {
+            height: 100%;
+            width: 100%;
+            transform:rotate(-45deg);
+        }
+        .image img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+          }
+      }
+    &:hover{
+        .image-container {
+            filter: drop-shadow(2px 2px 16px $Bluecyan); 
+        }
+    }
+}
+
+.clearfix::after{
+    display: block;
+    content: '';
+    clear: both;
+}
+
+.astan-blue{
+    background: #010147 !important;
+}
+
+.section{
+    margin-top:0;
+    h4{
+        margin: 5px;
+        +.row{
+            margin-top:0;
+        }
+    }
+}
